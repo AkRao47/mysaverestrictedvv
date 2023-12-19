@@ -103,51 +103,51 @@ async def cancel(event):
     
 async def run_batch(userbot, client, sender, countdown, link):
     for i in range(len(ids)):
-        timer = 60
+        timer = 5
         if i < 25:
-            timer = 6
+            timer = 5
         elif i < 50 and i > 25:
-            timer = 11
+            timer = 2
         elif i < 100 and i > 50:
-            timer = 24
+            timer = 3
         elif i < 1250 and i > 1000:
-            timer = 17
+            timer = 5
         elif i < 1500 and i > 1250:
-            timer = 27
+            timer = 5
         elif i < 2000 and i > 1500:
-            timer = 13
+            timer = 5
         elif i < 2500 and i > 2000:
-            timer = 31
+            timer = 5
         elif i < 3000 and i > 2500:
-            timer = 14
+            timer = 5
         elif i < 3500 and i > 3000:
-            timer = 24
+            timer = 5
         elif i < 4000 and i > 3500:
-            timer = 17
+            timer = 5
         elif i < 4500 and i > 4000:
-            timer = 27
+            timer = 5
         elif i < 5000 and i > 4500:
-            timer = 13
+            timer = 5
         elif i < 5500 and i > 5000:
-            timer = 27
+            timer = 5
         elif i < 6000:
-            timer = 11
+            timer = 5
         elif i < 6500:
-            timer = 25
+            timer = 5
         elif i < 7000:
-            timer = 17
+            timer = 5
         elif i < 7500:
-            timer = 40
+            timer = 5
         elif i < 8000: 
-            timer = 14
+            timer = 5
         elif i < 8500: 
-            timer = 17
+            timer = 5
         elif i < 9000:
-            timer = 15
+            timer = 5
         elif i < 9500: 
-            timer = 32
+            timer = 5
         elif i < 10000: 
-            timer = 17
+            timer = 5
         
         
         if 't.me/c/' not in link:
