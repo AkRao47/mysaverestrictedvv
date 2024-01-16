@@ -21,9 +21,9 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger("telethon").setLevel(logging.INFO)
 
-ft = f"To use this bot you've to join @{fs}."
+ft = f"**To use this bot you've to join @{fs}.**"
 
-message = "Send me the message link you want to start saving from, as a reply to this message."
+message = "**Send me the message link you want to start saving from, as a reply to this message.**"
           
 process=[]
 timer=[]
@@ -44,7 +44,7 @@ async def clone(event):
     lit=event.text
     li=lit.split("\n")
     if len(li) > 5:
-        await event.reply("max 5 links per message")
+        await event.reply("**max 5 links per message**")
         return
     for li in li:
         #1239
@@ -60,9 +60,9 @@ async def clone(event):
         if s == True:
             await event.reply(r)
             return
-        edit = await event.reply("Processing!")
+        edit = await event.reply("**Processing!!👨‍💻**")
         if f'{int(event.sender_id)}' in user:
-            return await edit.edit("Please don't spam links, wait until ongoing process is done.")
+            return await edit.edit("**Please don't spam links, wait until ongoing process is done.**")
         user.append(f'{int(event.sender_id)}')
         if "|" in li:
             url = li
@@ -97,11 +97,11 @@ async def clone(event):
                 m = msg_id
                 await get_msg(userbot, Bot, event.sender_id, edit.id, link, m, file_name)
         except FloodWait as fw:
-            await Drone.send_message(event.sender_id, f'Try again after {fw.value} seconds due to floodwait from telegram.')
+            await Drone.send_message(event.sender_id, f'**Try again after {fw.value} seconds due to floodwait from telegram.**')
             await edit.delete()
         except Exception as e:
             logging.info(e)
-            await Drone.send_message(event.sender_id, f"An error occurred during cloning of `{link}`\n\n**Error:** {str(e)}")
+            await Drone.send_message(event.sender_id, f"**An error occurred during cloning of `{link}`\n\n**Error:** {str(e)}**")
             await edit.delete()
         ind = user.index(f'{int(event.sender_id)}')
         user.pop(int(ind))
