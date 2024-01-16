@@ -36,16 +36,16 @@ def video_metadata(file):
 async def join(client, invite_link):
     try:
         await client.join_chat(invite_link)
-        return "Successfully joined the Channel"
+        return "**Successfully joined the Channel✅**"
     except UserAlreadyParticipant:
-        return "User is already a participant."
+        return "**User is already a participant.✅**"
     except (InviteHashInvalid, InviteHashExpired):
-        return "Could not join. Maybe your link is expired or Invalid."
+        return "**Could not join. Maybe your link is expired or Invalid.❌**"
     except FloodWait:
-        return "Too many requests, try again later."
+        return "**Too many requests, try again later.**"
     except Exception as e:
         print(e)
-        return f"{e} \nCould not join, try joining manually."
+        return f"**{e} \nCould not join, try joining manually.**"
     
     
     
@@ -57,9 +57,9 @@ async def force_sub(client, channel, id, ft):
         left = x.stringify()
         s, r = (True, ft) if 'left' in left else (False, None)
     except UserNotParticipantError:
-        s, r = True, f"To use this bot you've to join @{channel}."
+        s, r = True, f"**To use this bot you've to join @{channel}.**"
     except Exception:
-        s, r = True, "ERROR: Add in ForceSub channel, or check your channel id."
+        s, r = True, "**ERROR: Add in ForceSub channel, or check your channel id.**"
     return s, r
 
 #------------------------------
