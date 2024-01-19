@@ -44,7 +44,7 @@ async def check(userbot, client, link):
             return False, "**Invalid Link!❌**"
         except Exception as e:
             logging.info(e)
-            return False, "**Have you joined the channel?**🤔"
+            return False, "**Have you joined the channel?🤔**"
     else:
         try:
             chat = str(link.split("/")[-2])
