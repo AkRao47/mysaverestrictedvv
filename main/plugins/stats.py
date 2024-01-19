@@ -41,21 +41,21 @@ async def stats(event):
     mem_t = humanbytes(memory.total)
     mem_a = humanbytes(memory.available)
     mem_u = humanbytes(memory.used)
-    stats = f'Bot Uptime: {currentTime}\n'\
-            f'OS Uptime: {osUptime}\n'\
-            f'Total Disk Space: {total}\n'\
-            f'Used: {used} | Free: {free}\n'\
-            f'Upload: {sent}\n'\
-            f'Download: {recv}\n'\
-            f'CPU: {cpuUsage}%\n'\
-            f'RAM: {mem_p}%\n'\
-            f'DISK: {disk}%\n'\
-            f'Physical Cores: {p_core}\n'\
-            f'Total Cores: {t_core}\n'\
-            f'SWAP: {swap_t} | Used: {swap_p}%\n'\
-            f'Memory Total: {mem_t}\n'\
-            f'Memory Free: {mem_a}\n'\
-            f'Memory Used: {mem_u}\n'
+    stats = f'**Bot Uptime: {currentTime}\n**'\
+            f'**OS Uptime: {osUptime}\n**'\
+            f'**Total Disk Space: {total}\n**'\
+            f'**Used: {used} | Free: {free}\n**'\
+            f'**Upload: {sent}\n**'\
+            f'**Download: {recv}\n**'\
+            f'**CPU: {cpuUsage}%\n**'\
+            f'**RAM: {mem_p}%\n**'\
+            f'**DISK: {disk}%\n**'\
+            f'**Physical Cores: {p_core}\n**'\
+            f'**Total Cores: {t_core}\n**'\
+            f'**SWAP: {swap_t} | Used: {swap_p}%\n**'\
+            f'**Memory Total: {mem_t}\n**'\
+            f'**Memory Free: {mem_a}\n**'\
+            f'**Memory Used: {mem_u}\n**'
     
     await event.reply(f"{stats}")
    #duz.edit(stats)
